@@ -2,6 +2,10 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+//SET MYPORT=3000 in Windows
+//EXPORT MYPORT=3000 in Linux
+const port = process.env.MYPORT || 3000;
+
 var app = express();
 
 hbs.registerPartials(__dirname + '/views/partials');
@@ -69,6 +73,6 @@ app.get('/bad', (request, response) => {
 });
 
 
-app.listen(3000, () => {
-    console.log('Server started');
+app.listen(port, () => {
+    console.log(`Server started at port : ${port}`);
 });
