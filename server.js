@@ -2,9 +2,9 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
-//SET MYPORT=3000 in Windows
-//EXPORT MYPORT=3000 in Linux
-const port = process.env.MYPORT || 3000;
+//SET PORT=3000 in Windows
+//EXPORT PORT=3000 in Linux
+const port = process.env.PORT || 3000;
 
 var app = express();
 
