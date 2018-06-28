@@ -49,11 +49,20 @@ app.get('/', (request, response) => {
 app.get('/about', (request, response) => {
     //response.send('<h1>About Page!</h1>');    
     response.render('about.hbs', {
-        pageTitle: 'About ME Page',
+        pageTitle: 'About ME Page'
         //currentYear: new Date().getFullYear()
 
     });
 });
+
+app.get('/projects', (request, response) => {    
+    response.render('projects.hbs', {
+        pageTitle: 'Project Page'
+        //currentYear: new Date().getFullYear()
+
+    });
+});
+
 
 app.get('/home', (request, response) => {
     //response.send('<h1>About Page!</h1>');    
